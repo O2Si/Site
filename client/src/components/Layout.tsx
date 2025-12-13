@@ -68,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <Button 
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-display font-semibold tracking-wide shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all"
-              onClick={() => window.open("https://wa.me/5521982454343", "_blank")}
+              onClick={() => window.open("https://wa.me/5521992834762", "_blank")}
             >
               Fale Conosco
             </Button>
@@ -101,7 +101,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <Button 
               className="w-full bg-primary text-primary-foreground font-display"
-              onClick={() => window.open("https://wa.me/5521982454343", "_blank")}
+              onClick={() => window.open("https://wa.me/5521992834762", "_blank")}
             >
               Fale Conosco
             </Button>
@@ -116,7 +116,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/5521982454343"
+        href="https://wa.me/5521992834762"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#128C7E] text-white flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:shadow-[0_0_30px_rgba(37,211,102,0.8)] transition-all duration-300 hover:scale-110 animate-in fade-in slide-in-from-bottom-10"

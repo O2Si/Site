@@ -149,7 +149,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-display text-lg px-8 h-14 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] transition-all" onClick={() => window.open("https://wa.me/5521982454343", "_blank")}>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-display text-lg px-8 h-14 shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] transition-all" onClick={() => window.open("https://wa.me/5521992834762", "_blank")}>
                 Fale com um especialista <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-display text-lg px-8 h-14 backdrop-blur-sm" onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}>
