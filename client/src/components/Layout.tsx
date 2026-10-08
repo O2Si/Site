@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Linkedin, ChevronRight, MessageCircle } from "lucide-react";
+import { Menu, X, Linkedin, ChevronRight, ChevronDown, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -22,6 +28,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Serviços", href: "#servicos" },
     { name: "Método", href: "#metodo" },
     { name: "Cases", href: "#cases" },
+  ];
+
+  const products = [
+    { name: "Harness", href: "https://www.o2si.com.br/harness" },
+    { name: "Vigro", href: "https://www.vigro.com.br" },
   ];
 
   const scrollToSection = (id: string) => {
@@ -66,7 +77,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {link.name}
               </a>
             ))}
-            <Button 
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest hover:text-glow outline-none">
+                Produtos
+                <ChevronDown size={14} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {products.map((product) => (
+                  <DropdownMenuItem key={product.name} asChild>
+                    <a href={product.href} target="_blank" rel="noopener noreferrer">
+                      {product.name}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <Button
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-display font-semibold tracking-wide shadow-[0_0_15px_rgba(0,240,255,0.3)] hover:shadow-[0_0_25px_rgba(0,240,255,0.6)] transition-all"
               onClick={() => window.open("https://wa.me/5521992834762", "_blank")}
             >
@@ -99,7 +125,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {link.name}
               </a>
             ))}
-            <Button 
+            <div className="pt-2 border-t border-white/5">
+              <span className="block text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">
+                Produtos
+              </span>
+              {products.map((product) => (
+                <a
+                  key={product.name}
+                  href={product.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-base font-medium text-white hover:text-primary py-2 block"
+                >
+                  {product.name}
+                </a>
+              ))}
+            </div>
+            <Button
               className="w-full bg-primary text-primary-foreground font-display"
               onClick={() => window.open("https://wa.me/5521992834762", "_blank")}
             >
